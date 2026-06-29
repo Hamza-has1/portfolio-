@@ -508,6 +508,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!pageContainer || !mainSectionsArray[index]) return;
     isScrolling = true;
     
+    // Temporarily disable scroll snap to avoid touch conflict on mobile
+    pageContainer.style.scrollSnapType = 'none';
+    
     const targetOffset = mainSectionsArray[index].offsetTop;
     const startScrollTop = pageContainer.scrollTop;
     const distance = targetOffset - startScrollTop;
@@ -529,6 +532,8 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateScroll);
       } else {
         isScrolling = false;
+        // Re-enable scroll snap
+        pageContainer.style.scrollSnapType = '';
       }
     }
 

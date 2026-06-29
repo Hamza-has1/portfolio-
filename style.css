@@ -1491,24 +1491,8 @@ body::before {
    ========================================== */
 
 @media (max-width: 1024px) {
-  html, body {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-  }
-
   .section {
-    height: auto;
-    min-height: 100vh;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
     padding: 90px 4% 48px 4%;
-  }
-
-  .page-container {
-    height: auto;
-    overflow-y: visible;
-    scroll-snap-type: none;
   }
 
   /* About section cards wrapping */
@@ -2287,6 +2271,35 @@ body::before {
   .promo-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Mobile details and layout adjustments */
+  .page-panel {
+    padding: 80px 4% 30px 4%;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+  }
+  .hero-role {
+    font-size: 1.1rem;
+  }
+  .hero-intro {
+    font-size: 12.5px;
+    line-height: 1.45;
+    max-width: 290px;
+    margin-bottom: 12px;
+  }
+  .visual-container {
+    max-width: 140px;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+  }
+  .hero-content {
+    gap: 12px;
+  }
+  #launch {
+    padding: 85px 4% 15px 4%;
   }
 }
 
